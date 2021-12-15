@@ -59,3 +59,22 @@ for ($i = 0; $i <= 4; $i++){
     echo "Lucas é bonito"."<br/>";
 }
 //Aqui a repetição acontecerá de algumas vezes
+
+//Repetição for each
+
+$ingredientes = [
+    "Leite",
+    "Farinha", "Queijo", "Morango"
+];
+echo "<br/>";
+echo "<ul>";
+foreach($ingredientes as $valor){
+    echo "<li>".$valor."</li>";
+}
+echo "<ul/>";
+
+
+foreach ($ingredientes as $chave => $valor){
+    echo "o ingrediente de numero ".($chave + 1)." e o ingrediente: ".$valor."<br/>";
+}
+//A vantagem do foreach é trabalhar com arrays, visto que você percorre com facilidade cada elemento
