@@ -11,3 +11,25 @@ $sobrenome = "Montes";
 $nomecompleto = $nome_1;
 $nomecompleto .= $sobrenome;
 echo $nomecompleto;
+
+echo "<br/> <br/>";
+
+$carros_do_sonho = [
+    "camaro",
+    "porsche",
+    "onix",
+    "crono"
+];
+
+print_r($carros_do_sonho, false);
+
+//Operador Spread
+
+//Uso de uma variável dentro de um array para evitar assim repetições de itens no outro array
+
+$lista_churras = ["Carne", "Frango", "Queijo", "bebidas"];
+
+$lista_de_compras = [...$lista_churras, "descartaveis", "carvão"];
+echo "<br/> <br/>";
+print_r($lista_de_compras, false);
+
