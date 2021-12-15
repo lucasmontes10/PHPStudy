@@ -50,3 +50,12 @@ while ($numero < 10){
     echo $numero."<br/>";
     $numero += 1;
 }
+
+//Loop agora o for
+//Repetição definida
+echo "<br/>";
+
+for ($i = 0; $i <= 4; $i++){
+    echo "Lucas é bonito"."<br/>";
+}
+//Aqui a repetição acontecerá de algumas vezes
