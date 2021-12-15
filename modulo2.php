@@ -41,3 +41,12 @@ switch ($tipo){
         echo "Opa! Encontramos hoje";
         break; 
 }
+
+//Loop em php
+//Primeiro laço visto era o while
+echo "<br/><br/>";
+$numero = 0;
+while ($numero < 10){
+    echo $numero."<br/>";
+    $numero += 1;
+}
