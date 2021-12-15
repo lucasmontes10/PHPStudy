@@ -28,4 +28,16 @@ $sobrenome_teste = "adamastor";
 $nome_completo .= $sobrenome_teste ?? "Não existe essa variavel"; //Aqui coloco apenas a negativa do termo
 echo $nome_completo;
 
-
+//Condicional Switch 
+$tipo = "string";
+switch ($tipo){
+    case "inteiro":
+        echo "Não foi possivel";
+        break;
+    case "Booleano":
+        echo "Não foi possível";
+        break;
+    case "string":
+        echo "Opa! Encontramos hoje";
+        break; 
+}
