@@ -20,4 +20,12 @@ $nome_condicional = "Lucas";
 $nome_completo =  $nome_condicional;
 $nome_completo .= isset($sobrenome_condicional)? $sobrenome_condicional: ' ';//Ou seja se existir sobrenome ele escreve o próprio sobronome
 //caso contrario entrará com uma string vazia, isso é utilizado para evitar que de erro no codigo
+$nome_completo .= isset($sobrenome_condicional)? $sobrenome_condicional: ' ';
+//Ou seja se existir sobrenome ele escreve o próprio sobronome
+//caso contrario entrará com uma string vazia, isso é utilizado para evitar que de erro no codigo
+//Esse é o operador null caos
+$sobrenome_teste = "adamastor";
+$nome_completo .= $sobrenome_teste ?? "Não existe essa variavel"; //Aqui coloco apenas a negativa do termo
+echo $nome_completo;
+
 
