@@ -38,3 +38,17 @@ $soma_Flecha = fn($x1, $x2 = 0) => $x1 + $x2;
 echo $soma_Flecha(10, 5);
 
 
+//Funções recursivas
+
+//Contrato: Vamos supor que tenhamos o fatoria de (n-1)! para chegar ao fatorial basta multiplicar pelo mesmo número
+echo "<br/><br/>";
+
+function fatorial(int $valor){
+    if ($valor <= 1){
+        return (1);
+    }else{
+        return $valor * fatorial($valor - 1);
+    }
+}
+
+echo fatorial(5);
