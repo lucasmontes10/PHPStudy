@@ -52,3 +52,28 @@ function fatorial(int $valor){
 }
 
 echo fatorial(5);
+echo "<br/><br/>";
+$numero_Arrendodar = 0.7;
+//Basta acessar a documentação para verificar as funções nativas matemáticas
+//https://www.php.net/manual/pt_BR/ref.math.php
+echo ceil($numero_Arrendodar);
+
+//Funções nativas de String
+//https://www.php.net/manual/pt_BR/book.strings.php
+
+$texto = "Ola, tudo bem? Como vai?";
+$texto = strtoupper($texto);
+echo "<br/><br/>";
+echo $texto;
+if (strcmp($texto, "tudo bem?") == 1){
+    echo "Strings iguais";
+}else{
+    echo "strings Diferentes";
+}
+
+//O split em diversas linguagens aqui chamamos de explode
+
+$clube = "Clube de Regatas do Flamengo";
+$clube_Junto = explode(" ", $clube);
+echo "<br/><br/>";
+print_r($clube_Junto);
