@@ -24,7 +24,10 @@ $funcao_Dizima = function(int $valor){
     return $valor * 0.1;
 };
 
+
 $dizima = $funcao_Dizima;
+//Podemos chamar a própria variável
+echo "<br/>Ola estamos aqui: ".$funcao_Dizima(10)."<br/>";
 echo "<br/><br/>";
 echo $dizima(10);
 echo "<br/><br/>";
@@ -77,3 +80,20 @@ $clube = "Clube de Regatas do Flamengo";
 $clube_Junto = explode(" ", $clube);
 echo "<br/><br/>";
 print_r($clube_Junto);
+
+
+//Utilizando o explode que pega uma string e transforma em array
+
+$testeExplode = "Ola que dia lindo de se ver!";
+$arrayTexto = explode(' ', $testeExplode);
+print_r($arrayTexto);
+$arrayTexto = str_split($testeExplode);
+echo "<br/>";
+print_r($arrayTexto);
+
+//Utilizando o number Format 
+
+$dataTeste = 11254.98;
+echo number_format($dataTeste, 1, ',', '.');
+//Primeiro parametro é a própria variavel, quantidade de decimais, simbolo dos decimais, simbolo dos milhares
+//Importante observar que coloquei apenas um decimal caso não seja possível ele faz a aproximação
