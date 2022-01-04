@@ -97,3 +97,40 @@ $dataTeste = 11254.98;
 echo number_format($dataTeste, 1, ',', '.');
 //Primeiro parametro é a própria variavel, quantidade de decimais, simbolo dos decimais, simbolo dos milhares
 //Importante observar que coloquei apenas um decimal caso não seja possível ele faz a aproximação
+
+
+//Funções nativas para array, é interessante observar toda a documentação
+
+//https://www.php.net/manual/pt_BR/ref.array.php
+$nomes_Array = ["Fernanda", "Ana", "Bartolomeu", "Cipriano"];
+echo "<br/>".count($nomes_Array)."<br/>";
+//count da exatamente o tamanho da lista desejada
+$nome_aprovados = ["Lucas", "Felipe", "Jonas"];
+$nome_alunos = ["Lucas", "Joao", "Felipe", "Jonas"];
+$reprovados_alunos = array_diff($nome_alunos, $nome_aprovados);
+echo "<br/>";
+print_r($reprovados_alunos);
+
+//Utilizando o arrayFilter onde chamamos uma função de callback para essa nova lista
+
+$lista_numeros = [90, 80, 10, 20, 30, 15, 20, 5];
+$maiores_idade = array_filter($lista_numeros, function($item){
+    if ($item < 18){
+        return false;
+    }else{
+        return true;
+    }
+});
+echo "<br/>";
+print_r($maiores_idade);
+//Utilizamos o filter exatamente para filtrar os elementos de um array
+
+$lista_numeros_duplicada = array_map(function($item){
+    return $item * 2;
+}, $lista_numeros);
+
+echo "<br/>";
+print_r($lista_numeros_duplicada);
+
+//Utilizamos o map caso queiramos realizar determinada ação em cada elemento do vetor, é diferente de filtrar ele
+
