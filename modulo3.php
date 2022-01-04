@@ -150,3 +150,6 @@ if (in_array('Lucas bonito', $nomes_teste)){
 }
 
 $nomes_juntos = implode(' ', $nomes_teste);
+
+//Funções nativas de data e hora
+//https://www.php.net/manual/pt_BR/book.datetime.php
