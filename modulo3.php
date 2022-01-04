@@ -134,3 +134,19 @@ print_r($lista_numeros_duplicada);
 
 //Utilizamos o map caso queiramos realizar determinada ação em cada elemento do vetor, é diferente de filtrar ele
 
+//pop() e o shift() nada mais servem para retirar último e o primeiro elemento de um array respectivamente
+array_pop($lista_numeros_duplicada);
+echo "<br/>";
+print_r($lista_numeros_duplicada);
+array_shift($lista_numeros_duplicada);
+
+//Observar a função sort e suas variações pode parecer interessante
+
+$nomes_teste = ['Lucas', 'Geovana', 'Fernanda'];
+if (in_array('Lucas bonito', $nomes_teste)){
+    echo "<br/>TEM SS<br/>";
+}else{
+    echo "<br/>TEM NÃO<br/>";
+}
+
+$nomes_juntos = implode(' ', $nomes_teste);
