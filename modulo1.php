@@ -33,3 +33,8 @@ $lista_de_compras = [...$lista_churras, "descartaveis", "carvão"];
 echo "<br/> <br/>";
 print_r($lista_de_compras, false);
 
+?>
+<br/>
+<h1> Essa pagina funciona como titulo também </h1>
+<hr>
+<br/>
