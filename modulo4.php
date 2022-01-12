@@ -9,7 +9,7 @@ include("header.php");
 //Se eu não falo a minha action ele envia para meu próprio arquivo/tela
 ?>
 
-<form method="POST" action="recebedor.php">
+<form method="GET" action="recebedor.php">
     <label>
         Nome:
         <br/>
@@ -21,6 +21,13 @@ include("header.php");
         Idade:
         <br/>
         <input type = "text" name="idade"/>
+    </label>
+    <br/>
+    <br/>
+    <label>
+        email:
+        <br/>
+        <input type="email" name="email">
     </label>
     <br/>
     <br/>
