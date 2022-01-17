@@ -33,3 +33,28 @@ include("header.php");
     <br/>
     <input type="submit" value = "enviar">
 </form>
+<?php
+    session_start();
+    if ($_SESSION['avisos']){
+        echo $_SESSION['avisos'];
+        $_SESSION['avisos'] = '';
+    }else{
+        $_SESSION['avisos'] = '';
+    }
+?>
+<form action="logar.php" method="GET">
+    <label>
+        email:
+        <br/>
+        <input type="email" name="emailLogar">
+    </label>
+    <br/>
+    <label>
+        Senha:
+        <br/>
+        <input type="password" name="senhaLogar">
+    </label>
+    <br/>
+    <br/>
+    <input type="submit" value = "enviarLogar">
+</form>
