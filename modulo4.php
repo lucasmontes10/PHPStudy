@@ -58,3 +58,11 @@ include("header.php");
     <br/>
     <input type="submit" value = "enviarLogar">
 </form>
+
+<?php
+//pegando arquivos de procedencia externa 
+$texto_Externo = file_get_contents('exemplo.txt');
+$texto_Externo = explode('\n', $texto_Externo);
+foreach ($texto_Externo as $linha){
+    echo $linha."<br/><br/>";
+}
