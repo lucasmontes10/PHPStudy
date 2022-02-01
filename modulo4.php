@@ -66,3 +66,6 @@ $texto_Externo = explode('\n', $texto_Externo);
 foreach ($texto_Externo as $linha){
     echo $linha."<br/><br/>";
 }
+
+//modificando o nome do arquivo da raiz
+rename('exemplo.txt', 'modificado.txt');
