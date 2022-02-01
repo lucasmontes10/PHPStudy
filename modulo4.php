@@ -69,3 +69,6 @@ foreach ($texto_Externo as $linha){
 
 //modificando o nome do arquivo da raiz
 rename('exemplo.txt', 'modificado.txt');
+//Caso eu queira remover um arquivo utilizo uma função pronta do php
+// unlink('modificado.php');
+
