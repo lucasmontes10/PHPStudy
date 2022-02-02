@@ -52,3 +52,31 @@ if(key_exists('empresa', $usuario)){
         <?php endforeach;?>        
     </tr>
 </table>
+
+
+<?php
+//Utilizando a função array reduce
+$pessoas = [ 
+    ['nome' => 'Fulano', 'sexo' => 'M', 'nota' => 9],
+    ['nome' => 'Beltrano', 'sexo' => 'M', 'nota' => 12],
+    ['nome' => 'Ciclana', 'sexo' => 'F', 'nota'=> 8]
+];
+//O subtotal vai receber de inicio o valor de 0
+function calcularMeninos($subtotal, $item){
+    if ($item['sexo'] === 'M'){
+        $subtotal += 1;
+    }
+    return $subtotal;
+}
+
+function calcularAprovados($subtotal, $item){
+    if ($item['nota'] > 10){
+        $subtotal += 1;
+    }
+    return $subtotal;
+}
+
+$total_m = array_reduce($pessoas, 'calcularMeninos', 0); //Por default ele já define esse parametro como 0
+$aprovados_quant = array_reduce($pessoas, 'calcularAprovados');
+echo "<br>".$total_m;
+echo "<br> O total de alunos aprovados foi de:".$aprovados_quant;
