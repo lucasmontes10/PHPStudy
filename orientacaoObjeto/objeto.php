@@ -30,12 +30,22 @@ class Post{
     }
 }
 
+class Matematica{
+    public static string $info = "Classe com atributos e metodos estaticos";
+    public static function Somar(int $x, int $y){
+        return $x + $y;
+    }
+}
+
+
 $post_one = new Post(20, 10, 'Lucas Montes');
 echo "Number of likes is \n".$post_one->likes;
 $post_one->setAuthor("Benardo");
 $post_one->addLikes();
 echo "The new number of likes is ".$post_one->likes;
 $post_one->printInformation();
+echo "</br>";
+echo Matematica::$info." e a soma e:".Matematica::Somar(10, 20);
 //Typed Properties
 
 //Propriedades tipadas
