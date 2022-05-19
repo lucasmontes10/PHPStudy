@@ -60,3 +60,33 @@ echo Matematica::$info." e a soma e:".Matematica::Somar(10, 20);
 //Encapsulamento tornando as propriedades um pouco mais com um sistema de proteção
 //criar o set e o get para utilizar das informações
 
+//Herança: Uma classe torna geral e outras herdam as características específicas dessa classe
+
+class Foto extends Post{
+    private $id;
+
+    function __construct($id){
+        $this->setId($id);
+    }
+
+    function getId(){
+        return $this->id;
+    }
+    function setId($id){
+        $this->id = $id;
+    }
+}
+
+//Aqui a classe Foto herda todas as caracteristicas de Post, então pega todas as infos, atributos e metodos
+
+//Entretanto vc não vai conseguir herdar um atributo privado da classe mãe, apenas dentro da classe
+
+//Já na propriedade protected, você consegue ter acesso na classe e nas classes herdadas
+
+
+//Entendendo Interface
+
+//fazendo o uso de interface: guia de implementação de uma classe, abstrato do abstrato
+//Exemplo clássico e simples:
+//criar um controle de qualidade
+
