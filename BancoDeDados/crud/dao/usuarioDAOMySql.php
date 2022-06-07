@@ -19,6 +19,8 @@ class usuarioDAOMySql implements UsuarioDAO{
             $sql->bindValue(':name', $u->getNome());
             $sql->bindValue(':email', $u->getEmail());
             $sql->execute();
+            //Adiciona o id ao meu objeto
+            $u->setId($this->pdo->lastInsertId());
             header("Location:index.php");
             exit;
         }else{
@@ -42,14 +44,34 @@ class usuarioDAOMySql implements UsuarioDAO{
         return $lista;
     }
     public function findById($id){
-
+        $usuario = new Usuario();
+        $sql = $this->pdo->prepare("SELECT * FROM usuarios WHERE id = :id");
+        $sql->bindValue(':id', $id);
+        $sql->execute();
+        if ($sql->rowCount() > 0){
+            $dados = $sql->fetch(PDO::FETCH_ASSOC);
+            $usuario->setId($dados['id']);
+            $usuario->setNome($dados['nome']);
+            $usuario->setEmail($dados['email']);
+            return $usuario;
+        }else{
+            return false;
+        }
     }
     public function remove($id){
-
+        $sql = $this->pdo->prepare("DELETE FROM usuarios WHERE id = :id");
+        $sql->bindValue(':id', $id);
+        $sql->execute();
     }
     public function update(Usuario $u){
-
-    }
+        $sql = $this->pdo->prepare("UPDATE usuarios SET nome = :name, email = :email WHERE id = :id");
+        $sql->bindValue(':name', $u->getNome());
+        $sql->bindValue(':email', $u->getEmail());
+        $sql->bindValue(':id', $u->getId());
+        $sql->execute();
+        header("Location:index.php");
+        exit;
+    }   
 }
 
 
